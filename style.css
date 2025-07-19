@@ -1,0 +1,209 @@
+:root {
+  /* Primary Color Palette */
+  --color-cream: #f4efe8;
+  --color-tan: #d2b48c;
+  --color-brown: #654321;
+  --color-tomato: #8b0000;
+  --color-rust: #aa2704;
+  --color-dark-green: #013220;
+  --color-olive: #9d9885;
+  --color-grey: #eae8e4;
+  --color-denim: #778fa8;
+
+  /* Text */
+  --text-primary: var(--color-dark-green);
+  --text-secondary: var(--color-brown);
+  --text-light: var(--color-grey);
+  --text-inverse: #fff;
+  --text-muted: var(--color-olive);
+
+  /* Backgrounds */
+  --bg-primary: var(--color-cream);
+  --bg-secondary: var(--color-grey);
+  --bg-dark: var(--color-dark-green);
+  --bg-card: #fff;
+
+  /* Fonts */
+  --font-primary: 'Playfair Display', serif;
+  --font-secondary: 'Source Sans Pro', sans-serif;
+
+  /* Shadows */
+  --shadow-light: 0 4px 12px rgba(1, 50, 32, 0.1);
+  --shadow-medium: 0 8px 25px rgba(1, 50, 32, 0.15);
+  --shadow-heavy: 0 15px 40px rgba(1, 50, 32, 0.2);
+}
+
+/* ===== BACKGROUND VIDEO CONTAINER ===== */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* ===== VIDEO OVERLAY ===== */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--color-denim);
+}
+
+a:hover {
+  color: var(--color-rust);
+}
+
+.navbar {
+  background-color: var(--color-dark-green);
+  color: var(--text-inverse);
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-inverse) !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  background-color: var(--color-tan);
+  color: var(--color-brown) !important;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, var(--color-dark-green), var(--color-rust));
+  color: var(--text-inverse);
+}
+
+.card,
+.menu-item,
+.booking-form,
+.testimonial {
+  background: var(--bg-card);
+  border: 2px solid var(--color-tan);
+  box-shadow: var(--shadow-light);
+  color: var(--text-primary);
+}
+
+.btn-golden {
+  background: var(--color-tan);
+  color: var(--text-inverse);
+  border: 2px solid var(--color-brown);
+}
+
+.btn-golden:hover {
+  background: var(--color-brown);
+  color: var(--text-inverse);
+}
+
+.footer {
+  background: linear-gradient(135deg, var(--color-dark-green), var(--color-brown));
+  color: var(--text-inverse);
+}
+
+.section-title {
+  color: var(--color-dark-green);
+}
+
+.dietary-badge.vegetarian {
+  background: var(--color-olive);
+}
+
+.dietary-badge.vegan {
+  background: var(--color-denim);
+}
+
+.dietary-badge.gluten-free {
+  background: var(--color-tomato);
+}
+.menu-card {
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menu-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dish-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.dish-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #013220;
+}
+
+.dish-desc {
+  font-size: 0.95rem;
+  color: #654321;
+}
+
+.dish-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #d2b48c;
+  color: white;
+  display: inline-block;
+  padding: 4px 10px;
+  margin-top: 8px;
+  border-radius: 5px;
+}
+
+/* Other utility classes */
+.text-inverse { color: var(--text-inverse) !important; }
+.bg-dark { background-color: var(--color-dark-green); }
+.bg-tan { background-color: var(--color-tan); }
+.text-tan { color: var(--color-tan); }
+.text-brown { color: var(--color-brown); }
